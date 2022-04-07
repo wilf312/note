@@ -24,10 +24,12 @@ export const loader = async () => {
 export default function Posts() {
 
   const {posts} = useLoaderData() as LoaderData
-  console.log(posts)
   return (
     <main>
       <h1>Posts</h1>
+      <Link to="admin" className='text-red-600 underline'>
+        admin
+      </Link>
       <ul>
         {posts.map((post) => (
           <li key={post.slug}>
