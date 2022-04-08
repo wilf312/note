@@ -1,4 +1,4 @@
-import { Link } from "@remix-run/react";
+import { Link } from '@remix-run/react'
 
 export default function AdminIndex() {
   return (
@@ -7,5 +7,5 @@ export default function AdminIndex() {
         Create a New Post
       </Link>
     </p>
-  );
+  )
 }
