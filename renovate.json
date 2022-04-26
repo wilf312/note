@@ -1,34 +1,12 @@
 {
-  "extends": [
-    "config:base",
-    "group:linters",
-    "group:test"
-  ],
-  "labels": [
-    "refactoring"
-  ],
+  "automerge": true,
   "packageRules": [
     {
-      "depTypeList": [
-        "dependencies",
-        "devDependencies"
-      ],
-      "updateTypes": [
-        "major",
-        "minor",
-        "patch"
-      ],
-      "groupName": "devDependencies"
+      "groupName": "husky",
+      "matchPackagePatterns": ["husky"],
+      "labels": ["renovate", "automerge:false"],
+      "rebaseWhen": "conflicted",
+      "automerge": false
     }
-  ],
-  "dependencies": {
-    "enabled": true
-  },
-  "prBodyNotes": [
-    "ライブラリの自動更新"
-  ],
-  "schedule": [
-    "after 10pm and before 5am every weekday"
-  ],
-  "timezone": "Asia/Tokyo"
+  ]
 }
